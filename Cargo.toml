@@ -6,4 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-js-sandbox = "0.2.0-rc.2"
+deno_core = "0.266.0"
+serde = "1.0.197"
+
+[dev-dependencies]
+tokio = { version = "1.36.0", features = ["macros"] }

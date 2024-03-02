@@ -959,6 +959,9 @@ class St {
     }
 }
 D.AST = B, D.Minimatch = St, D.escape = F, D.unescape = W;
-function match_with_minimatch(literal, expr) {
-    return D(literal, expr);
+
+function match_with_minimatch(request) {
+    return D(request.literal, request.expr);
 }
+
+Deno.core.ops.op_register_func(match_with_minimatch);
